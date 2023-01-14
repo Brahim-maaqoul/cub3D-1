@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: babkar <babkar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bmaaqoul <bmaaqoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 04:54:14 by babkar            #+#    #+#             */
-/*   Updated: 2023/01/12 17:42:09 by babkar           ###   ########.fr       */
+/*   Updated: 2023/01/12 17:21:02 by bmaaqoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_map	parse(char **argv)
 	if (fd == -1)
 		puterr("fd error\n");
 	map = parse_identifiers(line, fd, map);
-	line = skip_empty_line(fd);
+	line = skip_empty_line(line, fd);
 	if (!line)
 		puterr("map order reversed\n");
 	while(line)
