@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: babkar <babkar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bmaaqoul <bmaaqoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 01:25:02 by babkar            #+#    #+#             */
-/*   Updated: 2023/01/12 18:14:24 by babkar           ###   ########.fr       */
+/*   Updated: 2023/01/12 18:21:34 by bmaaqoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
-
 char	**ft_realloc(char **map, int size)
 {
     char **new_map;
@@ -19,7 +18,10 @@ char	**ft_realloc(char **map, int size)
 	
 	i = 0;
 	if (map == NULL)
-		return (char **)malloc((size + 1) * sizeof(char *));
+	{
+		map = (char **)malloc((size + 1) * sizeof(char *));
+		return map;
+	}
 	if (size == 0)
 		return NULL;
 	new_map = (char **)malloc((size + 1) * sizeof(char *));

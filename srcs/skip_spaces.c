@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   skip_spaces.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: babkar <babkar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bmaaqoul <bmaaqoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 22:30:17 by bmaaqoul          #+#    #+#             */
-/*   Updated: 2023/01/12 18:53:24 by babkar           ###   ########.fr       */
+/*   Updated: 2023/01/12 18:49:16 by bmaaqoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,9 @@ int check_space(char **str)
 		{
 			if (str[i][j] == '2' && i > 0)
 			{
-				if (str[i] && str[i][j + 1] == '0')
+				if (str[i][j + 1] == '0')
 					return (0);
-				if (str[i] && str[i][j - 1] == '0')
+				if (str[i][j - 1] == '0')
 					return (0);
 				if (str[i + 1] && str[i + 1][j] == '0')
 					return (0);

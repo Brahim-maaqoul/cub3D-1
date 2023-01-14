@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: babkar <babkar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bmaaqoul <bmaaqoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 18:44:34 by bmaaqoul          #+#    #+#             */
-/*   Updated: 2023/01/12 18:54:36 by babkar           ###   ########.fr       */
+/*   Updated: 2023/01/12 18:58:27 by bmaaqoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,6 @@ void check(char **str)
 
 void check_map(char **str, t_map *map)
 {
-	map = parse_map(str, map);
+	parse_map(str, map);
 	check(map->map);
 }
